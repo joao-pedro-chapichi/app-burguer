@@ -6,14 +6,20 @@
   padding: .5em, .2em;
   height: 70px;
 }
- 
+
 .brand {
-   font-size: 1.2em;
+   display: flex;
+   align-items: center;
+}
+
+.brand h2 {
+   margin-left: 10px;
 }
  
-.brand span {
-   font-weight: 900;
-   text-transform: uppercase;
+.brand .logo {
+   height: 40px;
+   border-radius: 10px;
+   margin-left: 1em;
 }
  
 .links_list {

@@ -1,8 +1,12 @@
-import React from 'react'
+import { React, useEffect } from 'react';
 
 function Register() {
+  useEffect(() => {
+    document.title = "Prime Burger - Cadastrar"
+  }, []);
+  
   return (
-    <div>Register</div>
+    <div>Cadastrar</div>
   )
 }
 
