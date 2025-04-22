@@ -12,9 +12,11 @@ const Login = () => {
       <div className={styles.main}>
         <div className={styles.leftSide}>
           <h1>Preencha seus dados abaixo para Logar</h1>
-          <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Senha" />
-          <button>Logar</button>
+          <form>
+            <input type="email"  required placeholder="Email" />
+            <input type="password" required placeholder="Senha" />
+            <button>Logar</button>
+          </form>
           <NavLink to="/register" className={styles.createAccount}>Não possui conta? Clique aqui</NavLink>
           <NavLink to="/" className={styles.backHome}>Voltar ao Inicio</NavLink>
         </div>
