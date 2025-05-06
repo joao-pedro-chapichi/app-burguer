@@ -59,9 +59,9 @@ const handleSubmit = async (e) => {
                     </span>
                     <input type="password" name="displayConfirm" required placeholder="Repetir Senha" value={displayConfirm} onChange={(e) => setConfirm(e.target.value)}/>
                 </label>
-                 <button className="btnCadastrar" onClick={handleSubmit}>
-                    Cadastrar
-                </button>
+                {!loading && <button className="btn">Cadastrar</button>}
+        {loading &&  <button className="btn" disabled>Aguarde...</button>}
+        {error && <p className="error">{error}</p>}
                 {error && <p className="error">{error}</p>}
             </form>
         </div>
