@@ -30,6 +30,12 @@ const handleSubmit = async (e) => {
     }
     const res = await createUser(user);
 }
+
+useEffect(() => {
+    if (authError) {
+        setError(authError);
+    }
+}, [authError]);
   
   return (
         <div>
@@ -60,8 +66,7 @@ const handleSubmit = async (e) => {
                     <input type="password" name="displayConfirm" required placeholder="Repetir Senha" value={displayConfirm} onChange={(e) => setConfirm(e.target.value)}/>
                 </label>
                 {!loading && <button className="btn">Cadastrar</button>}
-        {loading &&  <button className="btn" disabled>Aguarde...</button>}
-        {error && <p className="error">{error}</p>}
+                {loading &&  <button className="btn" disabled>Aguarde...</button>}
                 {error && <p className="error">{error}</p>}
             </form>
         </div>
