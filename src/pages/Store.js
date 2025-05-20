@@ -28,19 +28,19 @@ const Store = () => {
                     <span>
                         Endereço:
                     </span>
-                    <input type="email" name="displayEmail" required placeholder="Endereço"/>
+                    <input type="text" name="displayEmail" required placeholder="Endereço"/>
                 </label>
                 <label>
                     <span>
                         Cidade:
                     </span>
-                    <input type="password" name="displayPassword" required placeholder="Cidade"/>
+                    <input type="text" name="displayPassword" required placeholder="Cidade"/>
                 </label>
                 <label>
                     <span>
                         UF:
                     </span>
-                    <input type="password" name="displayConfirm" required placeholder="Estado"/>
+                    <input type="text" name="displayConfirm" required placeholder="UF"/>
                 </label>
                 <button className={styles.btnRegister}>
                     Cadastrar
