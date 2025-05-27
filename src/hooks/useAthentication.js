@@ -28,8 +28,8 @@ import {
       try {
         const { user } = await createUserWithEmailAndPassword(
           auth,
-          data.email,
-          data.password
+          data.displayEmail,
+          data.displayPassword
         );
    
         await updateProfile(user, {
@@ -50,8 +50,9 @@ import {
    
         setError(systemErrorMessage);
       }
-   
-      setLoading(false);
+      finally{
+        setLoading(false)
+      }
     };
    
     useEffect(() => {
