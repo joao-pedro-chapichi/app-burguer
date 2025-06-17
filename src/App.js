@@ -1,52 +1,36 @@
-// import logo from './images/logo.png';
-import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import Login from './pages/Login';
-import Register from './pages/Register';
-import Contact from './pages/Contact';
-import About from './pages/About';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Store from './pages/Store';
 
-import Painel from './pages/Painel';
-import Products from './pages/Product';
-import Brand from './pages/Brand';
+import Home from './screens/Home';
+import Login from './screens/Login';
+import Contact from './screens/Contact';
+import About from './screens/About';
+import Cadastrar from './screens/Register';
+
 import PublicLayout from './components/PublicLayout';
+import Painel from './screens/Painel';
+import Products from './screens/Products';
+import Brand from './screens/Brand';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <BrowserRouter>
+      <Routes>
+        {/* Layout PÚBLICO com navbar e logo */}
+        <Route element={<PublicLayout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Cadastrar />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
+        </Route>
 
-        <BrowserRouter>
-          <div className="container">
-            <Header />
-            <Routes>
-              <Route element={<PublicLayout />}>
-                <Route path="/" element={<Home />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/register" element={<Register />} />
-                <Route path="/store" element={<Store />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path='/about' element={<About />} />
-              </Route>
-
-              <Route path="/painel" element={<Painel />}>
-                <Route path="products" element={<Products />} />
-                <Route path="brand" element={<Brand />} />
-              </Route>
-            </Routes>
-          </div>
-        </BrowserRouter>
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        {/* <p>
-          Gerenciador de Tarefas e Relatórios para TO
-        </p> */}
-      </header>
-      <Footer />
-    </div>
+        {/* Layout ADMIN (sem navbar, sem logo) */}
+        <Route path="/painel" element={<Painel />}>
+          <Route path="products" element={<Products />} />
+          <Route path="brand" element={<Brand />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

@@ -1,9 +1,0 @@
-.mainContent {
-    text-align: center;
-    padding: 10px 0 0;
-    height: calc(100vh - 140px);
-}
-
-.mainContent .logoImg {
-    height: 300px;
-}
