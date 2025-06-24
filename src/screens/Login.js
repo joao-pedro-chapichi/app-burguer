@@ -31,7 +31,6 @@ const Login = () => {
     return (
         <div>
             <h2><center>Entrar</center></h2>
-            <p><center>Faça login</center></p>
             <form onSubmit={handleSubmit}>
                 <label>
                     <span>

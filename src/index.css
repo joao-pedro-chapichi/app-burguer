@@ -33,8 +33,11 @@ nav button:hover {
 }
 
 form {
+  border: 2px black solid;
   max-width: 40%;
   margin: 0 auto;
+  padding: 30px;
+  border-radius: 10px;
 }
 
 label {
@@ -58,7 +61,7 @@ input, textarea {
 }
 
 .btn {
-  background-color: #1a8918;
+  background-color: #513fda;
   color: #FFF;
   text-align: center;
   cursor: pointer;
